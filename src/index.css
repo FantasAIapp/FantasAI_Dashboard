@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 10 10 10;
+    --foreground: 245 245 245;
+
+    --card: 18 18 18;
+    --card-foreground: 245 245 245;
+
+    --popover: 18 18 18;
+    --popover-foreground: 245 245 245;
+
+    --primary: 255 122 0;
+    --primary-foreground: 10 10 10;
+
+    --secondary: 30 30 30;
+    --secondary-foreground: 245 245 245;
+
+    --muted: 30 30 30;
+    --muted-foreground: 179 179 179;
+
+    --accent: 255 179 71;
+    --accent-foreground: 10 10 10;
+
+    --destructive: 239 68 68;
+    --destructive-foreground: 245 245 245;
+
+    --border: 30 30 30;
+    --input: 30 30 30;
+    --ring: 255 122 0;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 18 18 18;
+    --sidebar-foreground: 245 245 245;
+    --sidebar-primary: 255 122 0;
+    --sidebar-primary-foreground: 10 10 10;
+    --sidebar-accent: 30 30 30;
+    --sidebar-accent-foreground: 245 245 245;
+    --sidebar-border: 30 30 30;
+    --sidebar-ring: 255 122 0;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    background: #0A0A0A;
+    color: #F5F5F5;
+  }
+
+  .glass-card {
+    @apply bg-white/5 backdrop-blur-lg border border-white/10 rounded-xl;
+  }
+
+  .orange-gradient {
+    background: linear-gradient(135deg, rgba(255, 122, 0, 0.2) 0%, rgba(255, 179, 71, 0.1) 100%);
+  }
+
+  .text-muted {
+    color: #B3B3B3;
+  }
+
+  .modal-overlay {
+    @apply fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4;
+  }
+
+  .modal-content {
+    @apply bg-[#121212] border border-[#FF7A00]/30 rounded-2xl p-6 max-w-md w-full max-h-[90vh] overflow-y-auto;
+  }
+
+  .orange-button {
+    @apply bg-[#FF7A00] hover:bg-[#FFB347] text-black font-medium px-4 py-2 rounded-lg transition-all duration-200 transform hover:scale-105;
+  }
+
+  .orange-input {
+    @apply bg-[#1E1E1E] border border-[#FF7A00]/30 text-white placeholder-[#B3B3B3] px-4 py-2 rounded-lg focus:border-[#FF7A00] focus:ring-1 focus:ring-[#FF7A00] transition-colors;
+  }
+}
+
+/* Global Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1E1E1E;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #FF7A00;
+  border-radius: 5px;
+  border: 2px solid #1E1E1E;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FF8A1A;
+}
+
+/* Firefox Scrollbar Styles */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #FF7A00 #1E1E1E;
+}
