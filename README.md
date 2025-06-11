@@ -37,11 +37,11 @@ An AI-powered, modern fitness management platform built with **ReactJS**, **Tail
 ## 🚀 Installation
 
 Clone the repository:
-bash
-
+```bash
 git clone https://github.com/yourusername/fantasai-dashboard.git
 cd fantasai-dashboard
 
 npm install
 
 npm run dev
+```
